@@ -187,3 +187,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .button-hm {
+    @apply bg-sky-400 p-2 m-1  scale-0 transition-transform duration-500 ease-in-out hover:scale-105;
+  }
+}

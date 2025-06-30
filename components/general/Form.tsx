@@ -1,4 +1,3 @@
-// components/ProjectForm.tsx
 "use client"; // <-- IMPORTANT: Marks this as a Client Component
 
 import { createProject } from "@/lib/actions"; // Import the Server Action
@@ -24,50 +23,18 @@ export default function Form() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        border: "1px solid #eee",
-        padding: "20px",
-        marginBottom: "20px",
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       <h2>Add New Project</h2>
       <div>
         <label htmlFor="title">Project Title:</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          required
-          style={{ marginLeft: "10px", padding: "5px" }}
-        />
+        <input type="text" id="title" name="title" required />
       </div>
       <div style={{ marginTop: "10px" }}>
         <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          rows={4}
-          style={{ marginLeft: "10px", padding: "5px", width: "80%" }}
-        ></textarea>
+        <textarea id="description" name="description" rows={4}></textarea>
       </div>
-      <button
-        type="submit"
-        style={{ marginTop: "15px", padding: "8px 15px", cursor: "pointer" }}
-      >
-        Add Project
-      </button>
-      {message && (
-        <p
-          style={{
-            marginTop: "10px",
-            color: message.startsWith("Error") ? "red" : "green",
-          }}
-        >
-          {message}
-        </p>
-      )}
+      <button type="submit">Add Project</button>
+      {message && <p>{message}</p>}
     </form>
   );
 }

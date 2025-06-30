@@ -16,10 +16,10 @@ const Navbar = () => {
             DASHBOARD
           </a>
           <a
-            href="/projects"
+            href="/project"
             className="hover:text-green-500 hover:border-b-2  rounded-sm m-1 p-1 "
           >
-            PROJECTS
+            PROJECT
           </a>
           <a
             href="/about"

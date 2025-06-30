@@ -25,12 +25,12 @@ const About = async () => {
 
   return (
     <div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="text-red-500">{error}</p>}
       <ProjectForm />
       <div>
         {!error &&
           data.map((project) => (
-            <div key={project.id}>
+            <div key={project.id} className="bg-slate-900 p-2 m-1">
               <h5>{project.title}</h5>
               <p>{project.description}</p>
             </div>
