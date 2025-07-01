@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import Header from "@/components/navbar/Header";
+import PageTransition from "@/components/PageTransition";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono",
+});
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -15,19 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <nav className="bg-gray-800 text-white p-4">
-          <div className="container mx-auto flex justify-between">
-            <a href="/" className="text-xl font-bold">
-              Portfolio
-            </a>
-            <a href="/admin" className="hover:underline">
-              Admin
-            </a>
-          </div>
-        </nav>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={jetbrainsMono.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <PageTransition>{children}</PageTransition>
+        </ThemeProvider>
       </body>
     </html>
   );
