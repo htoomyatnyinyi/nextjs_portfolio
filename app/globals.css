@@ -121,6 +121,12 @@
   }
 }
 
+@layer components {
+  .outline {
+    @apply border border-accent bg-transparent text-accent hover:bg-accent hover:text-green-500;
+  }
+}
+
 /* @layer base {
   body {
     @apply bg-slate-900 text-white leading-loose;

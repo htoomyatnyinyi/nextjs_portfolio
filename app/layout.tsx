@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/navbar/Header";
 import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
+          <StairTransition />
           <PageTransition>{children}</PageTransition>
         </ThemeProvider>
       </body>
