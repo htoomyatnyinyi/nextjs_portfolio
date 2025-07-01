@@ -1,72 +1,50 @@
+"use client";
+
 import React from "react";
-import ThemeToggle from "../general/ThemeToggle";
+import ModeToggle from "../theme/ModeToggle";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+const links = [
+  {
+    name: "Dashboard",
+    href: "/dashboard",
+  },
+  {
+    name: "Project",
+    href: "/project",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Admin",
+    href: "/admin",
+  },
+];
 
 const Navbar = () => {
+  const pathname = usePathname();
+  // console.log("Current Pathname:", pathname);
   return (
-    <header className="backdrop-blur-3xl shadow-2xl p-2 sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold">
-          HMNN's
-        </a>
-        <nav className="flex items-center space-x-6 ">
-          <a
-            href="/dashboard"
-            className="hover:text-green-500 hover:border-b-2  rounded-sm m-1 p-1 "
+    <div className="">
+      <div className="gap-8">
+        {links.map((link, index) => (
+          <Link
+            href={link.href}
+            key={index}
+            className={`${
+              link.href === pathname && "text-green-800 p-2 border-b-2"
+            }`}
           >
-            DASHBOARD
-          </a>
-          <a
-            href="/project"
-            className="hover:text-green-500 hover:border-b-2  rounded-sm m-1 p-1 "
-          >
-            PROJECT
-          </a>
-          <a
-            href="/about"
-            className="hover:text-green-500 hover:border-b-2  rounded-sm m-1 p-1 "
-          >
-            ABOUT
-          </a>
-          <a
-            href="/admin"
-            className="hover:text-green-500 hover:border-b-2  rounded-sm m-1 p-1 "
-          >
-            ADMIN
-          </a>
-          <a
-            href="/contact"
-            className="hover:text-green-500 hover:border-b-2  rounded-sm m-1 p-1 "
-          >
-            CONTACT
-          </a>
-        </nav>
-        <ThemeToggle />
+            {link.name}
+          </Link>
+        ))}
       </div>
-    </header>
+      <ModeToggle />
+    </div>
   );
 };
 
 export default Navbar;
-
-{
-  /* <div className="container mx-auto flex justify-between items-center">
-  <a href="/" className="text-2xl font-bold">
-    Portfolio
-  </a>
-  <nav className="flex items-center space-x-4">
-    <a href="/dashboard" className="hover:underline">
-      Dashboard
-    </a>
-    <a href="/projects" className="hover:underline">
-      Projects
-    </a>
-    <a href="/about" className="hover:underline">
-      About
-    </a>
-    <a href="/admin" className="hover:underline">
-      Admin
-    </a>
-    <ThemeToggle />
-  </nav>
-</div>; */
-}

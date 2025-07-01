@@ -80,9 +80,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Skill />
+      {/* <Skill />
       <AboutMe />
-      <ScienceBlock />
+      <ScienceBlock /> */}
       <Footer />
     </div>
   );
