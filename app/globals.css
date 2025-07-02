@@ -125,6 +125,15 @@
   .outline {
     @apply border border-accent bg-transparent text-accent hover:bg-accent hover:text-green-500;
   }
+  .c-h1 {
+    @apply text-[48px] xl:text-[80px] font-semibold;
+  }
+  .c-h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .c-h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
 }
 
 /* @layer base {
