@@ -1,3 +1,4 @@
+import Phtoto from "@/components/Phtoto";
 import { Button } from "@/components/ui/button";
 import { FileDownIcon } from "lucide-react";
 import React from "react";
@@ -7,7 +8,7 @@ const Home = () => {
     <div className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row  justify-between items-center xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left  ">
+          <div className="text-center xl:text-left order-2 xl:order-none ">
             <span className="text-xl mb-9 pb-9 ">Junior Web Developer</span>
             <h1 className="c-h1 ">
               Hello, I'm <br />{" "}
@@ -30,7 +31,9 @@ const Home = () => {
               <div>Socials</div>
             </div>
           </div>
-          <div>phto</div>
+          <div className="order-1 xl:order-none  mb-8 xl:mb-0">
+            <Phtoto />
+          </div>
         </div>
       </div>
     </div>
