@@ -21,10 +21,12 @@ const Phtoto = () => {
       >
         <Image
           src={hmnn}
-          alt=""
+          alt="hmnn"
           priority
           quality={100}
           fill
+          // fill={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-contain"
         />
       </motion.div>
