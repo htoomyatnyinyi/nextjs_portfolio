@@ -1,4 +1,5 @@
 import Phtoto from "@/components/Phtoto";
+import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FileDownIcon } from "lucide-react";
 import React from "react";
@@ -10,7 +11,7 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row  justify-between items-center xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none ">
             <span className="text-xl mb-9 pb-9 ">Junior Web Developer</span>
-            <h1 className="c-h1 ">
+            <h1 className="text-[48px] xl:text-[80px] font-semibold ">
               Hello, I'm <br />
               <span className="text-green-500">HTOO MYAT NYI NYI</span>
             </h1>
@@ -35,6 +36,7 @@ const Home = () => {
             <Phtoto />
           </div>
         </div>
+        <Stats />
       </div>
     </div>
   );

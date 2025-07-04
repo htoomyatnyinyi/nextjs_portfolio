@@ -33,7 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <StairTransition />
+          {/* <StairTransition /> */}
           <PageTransition>{children}</PageTransition>
         </ThemeProvider>
       </body>
