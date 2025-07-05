@@ -10,7 +10,12 @@ const ProjectForm = () => {
   return (
     <div className="p-2 m-1 ">
       <h1>Project Form</h1>
-      <form action={addProject} className="p-2 space-y-8">
+      <form
+        action={async (formData) => {
+          await addProject(formData);
+        }}
+        className="p-2 space-y-8"
+      >
         <div className="space-y-2">
           <Label htmlFor="title">Name</Label>
           <Input
