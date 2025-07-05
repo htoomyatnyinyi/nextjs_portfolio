@@ -23,3 +23,12 @@ model Project {
   link        String?
   createdAt   DateTime @default(now())
 }
+
+model ContactAddress {
+  id        Int @id @default(autoincrement())
+  name      String
+  email     String
+  message   String @db.LongText
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
