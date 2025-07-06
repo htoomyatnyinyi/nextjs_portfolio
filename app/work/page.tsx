@@ -1,7 +1,189 @@
-import React from "react";
+"use client";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import SlicebarButton from "./_components/SlicebarButton";
+
+const projects = [
+  {
+    num: "01",
+    category: "frontend",
+    title: "project 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet temporibus expedita quos, ea id velit provident, debitis perspiciatis quam ex pariatur magni distinctio labore aspernatur consectetur unde veniam accusantium?",
+    stack: [
+      { name: "react" },
+      { name: "tailwindcss" },
+      { name: "reduxtoolkit" },
+      { name: "rtk query" },
+    ],
+    image: "/assets/hmnn.jpeg",
+    live: "",
+    github: "https://www.github.com/htoomyatnyinyi/project1",
+  },
+  {
+    num: "02",
+    category: "fullstack",
+    title: "project 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet temporibus expedita quos, ea id velit provident, debitis perspiciatis quam ex pariatur magni distinctio labore aspernatur consectetur unde veniam accusantium?",
+    stack: [
+      { name: "Nextjs" },
+      { name: "tailwindcss" },
+      { name: "seo" },
+      { name: "prisma ORM" },
+      { name: "shadcn ui" },
+    ],
+    image: "/assets/hmnn.jpeg",
+    live: "",
+    github: "https://www.github.com/htoomyatnyinyi/project1",
+  },
+  {
+    num: "03",
+    category: "fullstack",
+    title: "project 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet temporibus expedita quos, ea id velit provident, debitis perspiciatis quam ex pariatur magni distinctio labore aspernatur consectetur unde veniam accusantium?",
+    stack: [
+      { name: "Nextjs" },
+      { name: "tailwindcss" },
+      { name: "seo" },
+      { name: "prisma ORM" },
+      { name: "shadcn ui" },
+    ],
+    image: "/assets/hmnn.jpeg",
+    live: "",
+    github: "https://www.github.com/htoomyatnyinyi/project1",
+  },
+];
 
 const Work = () => {
-  return <div>work</div>;
+  const [project, setProject] = useState(projects[0]);
+  const handleSlideChange = (swiper: any) => {
+    console.log(swiper, "handle");
+    // get current index
+    const currentIndex = swiper.activeIndex;
+    // update project base on index
+    setProject(projects[currentIndex]);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2, duration: 0.2 }}
+      className="min-h-[80vh] flex flex-col justify-center py-12 px-0"
+    >
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row xl:gap-9 ">
+          <div className="w-full xl:w-1/2 xl:h-100 flex flex-col xl:justify-between order-2 xl:order-none">
+            <div className="flex flex-col gap-6 h-1/2 ">
+              <div className="text-8xl font-extrabold  ">{project.num}</div>
+
+              <h2 className="text-4xl font-bold leading-none hover:text-green-500 transition-all duration-500 capitalize">
+                {project.category} Project
+              </h2>
+              <p className=" text-white/60">{project.description}</p>
+              {/* tech stack */}
+              <ul className="flex gap-4 capitalize">
+                {project.stack?.map((item, index) => (
+                  <li key={index} className="text-xl text-green-500">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                ))}
+              </ul>
+              {/* border */}
+              <div className="border border-white/60"></div>
+              {/* live project */}
+              <div className="flex items-center gap-4">
+                <Link href={project.live || "#"}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className="h-20 w-20 flex justify-center items-center bg-white/5 rounded-full group">
+                        <BsArrowUpRight className="text-3xl group-hover:text-green-500" />
+                      </TooltipTrigger>
+                      <TooltipContent>Live Project</TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {/* github */}
+                <Link href={project.github || "#"}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className="h-20 w-20 flex justify-center items-center bg-white/5 rounded-full group">
+                        <BsGithub className="text-3xl group-hover:text-green-500" />
+                      </TooltipTrigger>
+                      <TooltipContent>Github Repo </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-full xl:w-1/2 ">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="xl:h-[520px] mb-12"
+              onSlideChange={handleSlideChange}
+            >
+              {projects.map((p, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className=" h-auto relative rounded-lg"
+                  />
+                </SwiperSlide>
+              ))}
+              <SlicebarButton />
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
 export default Work;
+
+{
+  /*
+  // import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectLabel,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
+  <div>
+  <Select>
+    <SelectTrigger>
+      <SelectValue placeholder="select a service" />
+    </SelectTrigger>
+    <SelectContent>
+      <SelectGroup>
+        <SelectLabel>Select a Service</SelectLabel>
+        <SelectItem value="frontend">Frontend Development</SelectItem>
+        <SelectItem value="backend">Backend Development</SelectItem>
+        <SelectItem value="database">Database Development </SelectItem>
+        <SelectItem value="deploy">Deploy </SelectItem>
+      </SelectGroup>
+    </SelectContent>
+  </Select>
+</div>; */
+}
