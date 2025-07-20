@@ -3,8 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const PersonalInformation = [
   { label: "Name", value: "Htoo Myat Nyi Nyi" },
   { label: "Email", value: "htoomyatnyinyi@gmail.com" },
-  { label: "Phone", value: "+1 (234) 567-8901" },
-  { label: "Location", value: "City, Country" },
+  { label: "Phone", value: "+66 0814152515" },
+  { label: "Location", value: "Thailand, Bangkok" },
   { label: "GitHub", value: "https://github.com/htoomyatnyinyi" },
 ];
 

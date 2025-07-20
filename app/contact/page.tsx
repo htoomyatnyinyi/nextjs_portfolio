@@ -1,4 +1,5 @@
 // import prisma from "@/lib/prisma";
+import { BsMailbox, BsTelephone } from "react-icons/bs";
 import ContactForm from "./_components/ContactForm";
 
 const Contact = async () => {
@@ -32,14 +33,16 @@ const Contact = async () => {
               </p>
               <ul className="text-gray-500 space-y-2 text-sm">
                 <li>
-                  📧
+                  <BsMailbox />
                   <span className="font-medium">htoomyatnyinyi@gmail.com</span>
                 </li>
                 <li>
-                  📞 <span className="font-medium">+1 (234) 567-8901</span>
+                  <BsTelephone />
+                  <span className="font-medium">+1 (234) 567-8901</span>
                 </li>
                 <li>
-                  🌍 <span className="font-medium">City, Country</span>
+                  <BsMailbox />
+                  <span className="font-medium">City, Country</span>
                 </li>
               </ul>
             </div>
