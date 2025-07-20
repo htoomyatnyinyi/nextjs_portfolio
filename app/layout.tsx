@@ -7,6 +7,7 @@ import Header from "@/components/navbar/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>
+          <Analytics />
           <Toaster />
         </ThemeProvider>
       </body>
