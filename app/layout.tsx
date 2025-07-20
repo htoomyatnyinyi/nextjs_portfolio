@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/navbar/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import { Toaster } from "@/components/ui/sonner";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -14,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A personal portfolio built with Next.js and Prisma",
+  title: "HTOO MYAT NYIN YI | Portfolio",
+  description: "I need to walk before you can run.",
 };
 
 export default function RootLayout({
@@ -33,13 +34,15 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {/* <StairTransition /> */}
+          <StairTransition />
           <PageTransition>{children}</PageTransition>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
