@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import hmnn from "@/public/hmnnn.png";
+// import hmnn from "@/public/hmnnn.png";
+import hmnn from "@/public/hm.png";
 
 const Phtoto = () => {
   return (
