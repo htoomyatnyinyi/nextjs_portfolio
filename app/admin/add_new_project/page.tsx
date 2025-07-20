@@ -1,31 +1,39 @@
-import ProjectForm from "../_components/projectForm";
-import prisma from "@/lib/prisma";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { revalidateTag } from "next/cache";
+// import ProjectForm from "../_components/projectForm";
+// import prisma from "@/lib/prisma";
+// import { Button } from "@/components/ui/button";
+// import Link from "next/link";
+// import { revalidateTag } from "next/cache";
 
-const getData = async () => {
-  const data = await prisma.project.findMany();
-  console.log(data, "data");
-  // revalidateTag("projects");
+// const getData = async () => {
+//   const data = await prisma.project.findMany();
+//   console.log(data, "data");
+//   // revalidateTag("projects");
 
-  return data;
+//   return data;
+// };
+
+// const addNewProject = async () => {
+//   const projects = await getData();
+//   console.log(projects, " projec");
+//   return (
+//     <div>
+//       <div>
+//         {projects?.map((project: any) => (
+//           <div>{project.title}</div>
+//         ))}
+//       </div>
+//       <h1>AddNewProject</h1>
+//       {/* <ProjectForm /> */}
+//     </div>
+//   );
+// };
+
+// export default addNewProject;
+
+import React from "react";
+
+const page = () => {
+  return <div>page</div>;
 };
 
-const addNewProject = async () => {
-  const projects = await getData();
-  console.log(projects, " projec");
-  return (
-    <div>
-      <div>
-        {projects?.map((project: any) => (
-          <div>{project.title}</div>
-        ))}
-      </div>
-      <h1>AddNewProject</h1>
-      {/* <ProjectForm /> */}
-    </div>
-  );
-};
-
-export default addNewProject;
+export default page;
