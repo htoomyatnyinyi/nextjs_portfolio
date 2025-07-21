@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FileDownIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { BsFacebook, BsPhone, BsLine, BsMailbox } from "react-icons/bs";
+import { BsFacebook, BsPhone, BsLine, BsMailbox, BsGit } from "react-icons/bs";
 
 const Home = () => {
   return (
@@ -44,6 +44,9 @@ const Home = () => {
                 </Link>
                 <Link href="mailto:htoomyatnyinyi@gmail.com">
                   <BsMailbox className="ml-4 text-xl" />
+                </Link>
+                <Link href="https://github.com/htoomyatnyinyi">
+                  <BsGit className="ml-4 text-xl" />
                 </Link>
               </div>
             </div>

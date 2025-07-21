@@ -38,11 +38,11 @@ const Contact = async () => {
                 </li>
                 <li>
                   <BsTelephone />
-                  <span className="font-medium">+1 (234) 567-8901</span>
+                  <span className="font-medium">+66 0814152515</span>
                 </li>
                 <li>
                   <BsMailbox />
-                  <span className="font-medium">City, Country</span>
+                  <span className="font-medium">Bangkok, Thailand</span>
                 </li>
               </ul>
             </div>
