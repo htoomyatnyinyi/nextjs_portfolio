@@ -20,19 +20,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
+    category: "full stacks",
+    title: "jobdiary",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet temporibus expedita quos, ea id velit provident, debitis perspiciatis quam ex pariatur magni distinctio labore aspernatur consectetur unde veniam accusantium?",
+      "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups.",
     stack: [
       { name: "React" },
       { name: "TailwindCSS" },
       { name: "Redux Toolkit" },
       { name: "RTK Query" },
+      { name: "TypeScript" },
+      { name: "Nodejs /Express" },
+      { name: "Raw SQL" },
     ],
-    image: "/assets/hmnn.jpeg",
-    live: "",
-    github: "https://www.github.com/htoomyatnyinyi/project1",
+    image: "/assets/details.png",
+    live: "https://jobdiary.vercel.app/",
+    github: "https://www.github.com/htoomyatnyinyi",
   },
   {
     num: "02",
