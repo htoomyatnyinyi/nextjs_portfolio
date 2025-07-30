@@ -12,26 +12,28 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row  justify-between items-center xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none ">
-            <span className="text-xl mb-9 pb-9 ">Junior Web Developer</span>
+            <span className="text-xl mb-9 pb-9 ">
+              Self-Taught Junior Web Developer
+            </span>
             <h1 className="text-[48px] xl:text-[80px] font-semibold ">
               Hello, I'm <br />
               <span className="text-green-500">HTOO MYAT NYI NYI</span>
             </h1>
             <p className="max-w-[500px] mb-9 ">
-              I am a junior web developer with a passion for creating dynamic
-              and user-friendly web applications. I specialize in front-end
-              development, focusing on responsive design and seamless user
-              experiences.
+              I am a self-taught junior web developer with a passion for
+              creating dynamic and user-friendly web applications. I specialize
+              in front-end development, focusing on responsive design and
+              seamless user experiences.
               <br />
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
+              {/* <Button
                 variant={"outline"}
                 className="uppercase flex items-center gap-2"
               >
                 <span>Download CV</span>
                 <FileDownIcon className="text-xl" />
-              </Button>
+              </Button> */}
               <div className="flex items-center justify-center mt-4 xl:mt-0">
                 <Link href="https://www.facebook.com/htoomyat.nyinyi.3">
                   <BsFacebook className="ml-4 text-xl" />

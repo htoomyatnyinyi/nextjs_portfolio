@@ -20,10 +20,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const projects = [
   {
     num: "01",
-    category: "full stacks",
-    title: "jobdiary",
+    category: "frontend",
+    title: "jobDiary - Job Application Tracker",
     description:
-      "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups.",
+      "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups. (Please Note : When visit the jobdiary, you need to login with your github account to wait for a while to see all job list because i deployed it on free server on both backend and database so it may take some time to load the data)",
     stack: [
       { name: "React" },
       { name: "TailwindCSS" },
@@ -39,37 +39,38 @@ const projects = [
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "project 2",
+    category: "frontend",
+    title: "Ecommerce",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet temporibus expedita quos, ea id velit provident, debitis perspiciatis quam ex pariatur magni distinctio labore aspernatur consectetur unde veniam accusantium?",
+      "An e-commerce web application that allows users to browse products, add them to a cart, and manage their orders.(Frontend part - Under development)",
     stack: [
-      { name: "Next.js" },
+      { name: "ReactJs" },
       { name: "TailwindCSS" },
-      { name: "SEO" },
-      { name: "Prisma ORM" },
       { name: "shadcn/ui" },
+      { name: "Reduxtoolkit" },
+      { name: "RTK Query" },
+      { name: "Typescript" },
+      { name: "Some necessary frontend library" },
     ],
-    image: "/assets/hmnn.jpeg",
+    image: "/assets/ecommerce.png",
     live: "",
-    github: "https://www.github.com/htoomyatnyinyi/project1",
+    github: "https://github.com/htoomyatnyinyi/ecommerce_client.git",
   },
   {
     num: "03",
-    category: "fullstack",
-    title: "project 3",
+    category: "backend",
+    title: "Nodejs With Prisma ORM for Ecommerce API",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis amet temporibus expedita quos, ea id velit provident, debitis perspiciatis quam ex pariatur magni distinctio labore aspernatur consectetur unde veniam accusantium?",
+      "A backend API for an e-commerce application built with Node.js and Prisma ORM. It provides endpoints for managing products, orders, and user authentication.",
     stack: [
-      { name: "Next.js" },
-      { name: "TailwindCSS" },
-      { name: "SEO" },
+      { name: "Nodejs with Express" },
       { name: "Prisma ORM" },
-      { name: "shadcn/ui" },
+      { name: "Typescript" },
+      { name: "Some necessary backend library" },
     ],
-    image: "/assets/hmnn.jpeg",
+    image: "/assets/project_2.png",
     live: "",
-    github: "https://www.github.com/htoomyatnyinyi/project1",
+    github: "https://github.com/htoomyatnyinyi/ecommerce_server.git",
   },
 ];
 
