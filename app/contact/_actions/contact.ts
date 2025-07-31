@@ -65,7 +65,7 @@ export async function contact(formData: FormData) {
 
   // Simulate an API call or email sending
   try {
-    console.log({ name, email, message }, "check email");
+    // console.log({ name, email, message }, "check email");
     await sendEmail({
       to: "htoomyatnyinyi@gmail.com",
       from: email,
