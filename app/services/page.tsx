@@ -6,28 +6,27 @@ const services = [
     title: "Frontend Development",
     description:
       "Responsive, SEO-friendly interfaces using Next.js, React, and Tailwind.",
-    tags: ["Next.js", "Tailwind", "ShadCN UI"],
+    tags: ["React, Next.js", "Tailwind", "ShadCN UI"],
   },
   {
-    icon: <Server className="w-8 h-8 text-blue-500" />,
+    icon: <Server className="w-8 h-8 text-green-500" />,
     title: "Backend Development",
-    description:
-      "Scalable APIs with Node.js and Prisma for efficient data handling.",
-    tags: ["Node.js", "Prisma", "REST API"],
+    description: "APIs with Node.js and Prisma for efficient data handling.",
+    tags: ["Node.js", "Prisma ORM", "REST API"],
   },
   {
-    icon: <Database className="w-8 h-8 text-purple-500" />,
+    icon: <Database className="w-8 h-8 text-green-500" />,
     title: "Database Design",
-    description:
-      "Robust schemas and optimized queries for high-performance apps.",
-    tags: ["Prisma ORM", "PostgreSQL", "SQL"],
+    description: "Basic schemas and queries for high-performance apps.",
+    tags: ["Prisma ORM", "PostgreSQL", "MySQL"],
   },
   {
-    icon: <Rocket className="w-8 h-8 text-pink-500" />,
+    icon: <Rocket className="w-8 h-8 text-green-500" />,
     title: "Deployment",
     description:
-      "Deploy and scale your apps on Vercel, AWS, or Docker environments.",
-    tags: ["Vercel", "Docker", "CI/CD"],
+      "Deploy and scale your apps on Vercel and Render, and setup Docker environments.",
+    tags: ["Vercel", "Render", "Docker"],
+    // tags: ["Vercel", "Docker", "AWS", "CI/CD"],
   },
 ];
 

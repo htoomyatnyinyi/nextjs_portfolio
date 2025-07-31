@@ -20,7 +20,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "frontend (Achieved)",
     title: "jobDiary - Job Application Tracker",
     description:
       "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups. (Please Note : When visit the jobdiary, you need to login with your github account to wait for a while to see all job list because i deployed it on free server on both backend and database so it may take some time to load the data)",
@@ -39,8 +39,27 @@ const projects = [
   },
   {
     num: "02",
-    category: "frontend",
-    title: "Ecommerce",
+    category: "backend (Achieved)",
+    title: "jobDiaryServer - Backend API",
+    description:
+      "A backend API for the jobDiary application built with Node.js and Express. It provides endpoints for managing job applications, users, and authentication.",
+    stack: [
+      { name: "React" },
+      { name: "TailwindCSS" },
+      { name: "Redux Toolkit" },
+      { name: "RTK Query" },
+      { name: "TypeScript" },
+      { name: "Nodejs /Express" },
+      { name: "Raw SQL" },
+    ],
+    image: "/assets/diary_server.png",
+    live: "https://diary-server-u9na.onrender.com",
+    github: "https://github.com/htoomyatnyinyi/diary_server.git",
+  },
+  {
+    num: "03",
+    category: "frontend (under development)",
+    title: "Ecommerce App (Frontend)",
     description:
       "An e-commerce web application that allows users to browse products, add them to a cart, and manage their orders.(Frontend part - Under development)",
     stack: [
@@ -57,8 +76,8 @@ const projects = [
     github: "https://github.com/htoomyatnyinyi/ecommerce_client.git",
   },
   {
-    num: "03",
-    category: "backend",
+    num: "04",
+    category: "backend (under development)",
     title: "Nodejs With Prisma ORM for Ecommerce API",
     description:
       "A backend API for an e-commerce application built with Node.js and Prisma ORM. It provides endpoints for managing products, orders, and user authentication.",
@@ -98,8 +117,11 @@ const Work = () => {
               <div className="text-7xl md:text-8xl font-extrabold text-gray-100">
                 {project.num}
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white hover:text-green-500 transition-colors capitalize">
+              <h2 className="text-xl md:text-2xl font-bold leading-tight text-white hover:text-green-500 transition-colors capitalize">
                 {project.category} Project
+              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white hover:text-green-500 transition-colors capitalize">
+                {project.title}
               </h2>
               <p className="text-gray-300 leading-relaxed">
                 {project.description}

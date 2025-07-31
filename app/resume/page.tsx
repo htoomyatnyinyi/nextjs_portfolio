@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 
 const PersonalInformation = [
   { label: "Name", value: "Htoo Myat Nyi Nyi" },
@@ -17,23 +18,30 @@ const Education = [
 ];
 
 const Skills = [
-  { name: "Next.js", level: "Expert" },
-  { name: "React", level: "Advanced" },
+  { name: "Next.js", level: "Advanced" },
+  { name: "React", level: "Expert" },
   { name: "Node.js", level: "Advanced" },
   { name: "Tailwind CSS", level: "Advanced" },
+  { name: "Shadcn UI", level: "Intermediate" },
   { name: "Prisma ORM", level: "Advanced" },
   { name: "RAW SQL", level: "Intermediate" },
-  { name: "ShadCN", level: "Intermediate" },
 ];
 
 const Projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio built with Next.js and Tailwind CSS.",
+    title: "jobDiary - Job Application Tracker",
+    description:
+      "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups. (Please Note : When visit the jobdiary, you need to login with your github account to wait for a while to see all job list because i deployed it on free server on both backend and database so it may take some time to load the data)",
   },
   {
-    title: "E-commerce App",
-    description: "Full-stack e-commerce application with Prisma and Next.js.",
+    title: "E-commerce App (Frontend)",
+    description:
+      "An e-commerce web application that allows users to browse products, add them to a cart, and manage their orders.(Frontend part - Under development)",
+  },
+  {
+    title: "Node.js with Prisma ORM for E-commerce API",
+    description:
+      "A backend API for an e-commerce application built with Node.js and Prisma ORM. It provides endpoints for managing products, orders, and user authentication.",
   },
 ];
 
@@ -110,8 +118,13 @@ const Resume = () => {
                 key={index}
                 className="border-b last:border-none pb-4 hover: p-2 rounded-lg transition"
               >
-                <h3 className="text-lg font-semibold ">{project.title}</h3>
-                <p className="">{project.description}</p>
+                <Link href="/work">
+                  {/* <Link href={`/work/${project.title.toLowerCase().replace(/ /g, "-")}`}> */}
+                  <h3 className="text-lg font-semibold hover:underline ">
+                    {project.title}
+                  </h3>
+                  <p className="">{project.description}</p>
+                </Link>
               </div>
             ))}
           </TabsContent>
