@@ -34,16 +34,60 @@ const Projects = [
     title: "jobDiary - Job Application Tracker",
     description:
       "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups. (Please Note : When visit the jobdiary, you need to login with your github account to wait for a while to see all job list because i deployed it on free server on both backend and database so it may take some time to load the data)",
+    other: [
+      "This project is built with React",
+      "I used Tailwind CSSfor the UI components.",
+      "For Statement Management, I used Redux Toolkit which is a powerful tool for managing state in React applications.",
+      "I used RTK Query to manage the state of the every API call.",
+    ],
+  },
+  {
+    title: "jobDiary - Backend REST API",
+    description:
+      "A backend API for the jobDiary application built with Node.js and Express. It provides endpoints for managing job applications, users, and authentication.",
+    other: [
+      "I stop developing this porject because I need to learn more about authentication and authorization with role-based access control (RBAC) and user management. and also I need to learn more about how to handle rest api with RAW SQL.",
+      "That why I am not keep developing this project anymore.",
+      "Then I know how prisma ORM important and how it can help to handle database queries and migrations easily.",
+      "And How to keep the database schema clean and maintainable.",
+    ],
   },
   {
     title: "E-commerce App (Frontend)",
     description:
       "An e-commerce web application that allows users to browse products, add them to a cart, and manage their orders.(Frontend part - Under development)",
+    other: [
+      "This project is built with  React, and Tailwind CSS.",
+      "I used Shadcn UI for the UI components.",
+      "I used Redux Toolkit for state management.",
+      "Add To Cart and Remove From Cart functionality with RTK Query API calls and update the cart state via Redux Toolkit.",
+      "I used RTK Query to manage the state of the every API call.",
+    ],
   },
   {
     title: "Node.js with Prisma ORM for E-commerce API",
     description:
       "A backend API for an e-commerce application built with Node.js and Prisma ORM. It provides endpoints for managing products, orders, and user authentication.",
+    other: [
+      "This project is built with Node.js, Express, and Prisma ORM.",
+      "I used Prisma ORM for database management.",
+      "I used nodemailer to send emails for order confirmations and notifications.",
+      "I used JWT for user authentication and authorization.",
+      "I used bcrypt for password hashing and security.",
+      "I used dotenv for environment variable management.",
+      "I used cors for Cross-Origin Resource Sharing (CORS) to allow requests from different origins.",
+    ],
+  },
+  {
+    title: "Next.js With Prisma ORM and SSR",
+    description:
+      "A portfolio website built with Next.js, showcasing my projects and skills. It uses Prisma ORM for database management and implements server-side rendering (SSR) for improved performance.",
+    other: [
+      "This project is built with Next.js, and Tailwind CSS.",
+      "I used Shadcn UI for the UI components.",
+      "I used Prisma ORM for database management.",
+      "I use nodemailer to send email.",
+    ],
   },
 ];
 
@@ -126,6 +170,13 @@ const Resume = () => {
                     {project.title}
                   </h3>
                   <p className="">{project.description}</p>
+                  <div>
+                    {project.other.map((item, i) => (
+                      <p key={i} className="pt-4 text-sm text-gray-500">
+                        * {item}
+                      </p>
+                    ))}
+                  </div>
                 </Link>
               </div>
             ))}
