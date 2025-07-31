@@ -1,7 +1,7 @@
 import Phtoto from "@/components/Phtoto";
 import Stats from "@/components/Stats";
-import { Button } from "@/components/ui/button";
-import { FileDownIcon } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { FileDownIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { BsFacebook, BsPhone, BsLine, BsMailbox, BsGit } from "react-icons/bs";
@@ -21,9 +21,11 @@ const Home = () => {
             </h1>
             <p className="max-w-[500px] mb-9 ">
               I am a self-taught junior web developer with a passion for
-              creating dynamic and user-friendly web applications. I specialize
-              in front-end development, focusing on responsive design and
-              seamless user experiences.
+              creating dynamic and user-friendly web applications. I'm focusing
+              on both front-end and back-end development, along with experience
+              in frameworks like React or Next.js and Node.js with Express, and
+              Prisma ORM. I am eager to contribute my skills to a team that
+              values innovation and creativity in web development.
               <br />
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">

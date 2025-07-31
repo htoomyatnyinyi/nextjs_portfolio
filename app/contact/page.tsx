@@ -32,34 +32,41 @@ const Contact = async () => {
                 I usually reply within 24 hours. For faster response, connect
                 via my social links below.
               </p>
-              <div className="text-gray-500 space-y-2 gap-6 bg-sky-400 text-sm">
-                <Link
-                  href="mailto:htoomyatnyinyi@gmail.com"
-                  className="flex items-center gap-2"
-                >
+              <ul className="text-gray-500 space-y-10 text-sm ">
+                <li className="space-y-5 pt-10">
+                  <Link
+                    href="mailto:htoomyatnyinyi@gmail.com"
+                    className="flex space-x-8"
+                  >
+                    <BsMailbox className="ml-4 text-xl" />
+                    <span className="font-medium">
+                      htoomyatnyinyi@gmail.com
+                    </span>
+                  </Link>
+                </li>
+                <li className="space-y-5">
+                  <Link href="tel:+66 0814152515" className="flex space-x-8">
+                    <BsTelephone className="ml-4 text-xl" />
+                    <span className="font-medium">+66 0814152515</span>
+                  </Link>
+                </li>
+                {/* <li className="space-y-5">
                   <BsMailbox className="ml-4 text-xl" />
-                  <p className="font-medium">htoomyatnyinyi@gmail.com</p>
-                </Link>
-                <Link
-                  href="tel:+66 0814152515"
-                  className="flex items-center gap-2"
-                >
-                  <BsTelephone className="ml-4 text-xl" />
-                  <p className="font-medium">+66 0814152515</p>
-                </Link>
-                <Link
-                  href="https://line.me/ti/p/HR68FaB5UW"
-                  className="flex items-center gap-2"
-                >
-                  <BsLine className="ml-4 text-xl" />
-                  <p className="font-medium">htoomyatnyinyi</p>
-                </Link>
-                <BsMailbox className="ml-4 text-xl" />
-                <p className="font-medium">Bangkok, Thailand</p>
+                  <span className="font-medium">Bangkok, Thailand</span>
+                </li> */}
+                <li className="space-y-5">
+                  <Link
+                    href="https://line.me/ti/p/HR68FaB5UW"
+                    className="flex space-x-8"
+                  >
+                    <BsLine className="ml-4 text-xl " />
+                    <span className="font-medium">htoomyatnyinyi</span>
+                  </Link>
+                </li>
                 {/* <Link href="https://www.facebook.com/htoomyat.nyinyi.3">
-                  <p className="font-medium">Facebook</p>
+                  <span className="font-medium">Facebook</span>
                 </Link> */}
-              </div>
+              </ul>
             </div>
           </div>
         </div>

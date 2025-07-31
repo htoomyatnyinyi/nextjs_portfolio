@@ -18,7 +18,7 @@ const Education = [
 ];
 
 const Skills = [
-  { name: "Next.js", level: "Advanced" },
+  { name: "Next.js", level: "Intermediate" },
   { name: "React", level: "Expert" },
   { name: "Node.js", level: "Advanced" },
   { name: "Tailwind CSS", level: "Advanced" },

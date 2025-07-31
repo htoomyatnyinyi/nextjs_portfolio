@@ -23,7 +23,7 @@ const projects = [
     category: "frontend (Achieved)",
     title: "jobDiary - Job Application Tracker",
     description:
-      "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups. (Please Note : When visit the jobdiary, you need to login with your github account to wait for a while to see all job list because i deployed it on free server on both backend and database so it may take some time to load the data)",
+      "A web application for tracking job applications. It allows users to manage their job search process efficiently, including tracking applications, interviews, and follow-ups. (Please Note : When visit the jobdiary, please wait for a while to see all job list because I deployed it on free server on both backend and database so it may take some time to load the data)",
     stack: [
       { name: "React" },
       { name: "TailwindCSS" },
@@ -90,6 +90,25 @@ const projects = [
     image: "/assets/project_2.png",
     live: "",
     github: "https://github.com/htoomyatnyinyi/ecommerce_server.git",
+  },
+  {
+    num: "05",
+    category: "Portfolio",
+    title: "Next.js With Prisma ORM and SSR",
+    description:
+      "A portfolio website built with Next.js, showcasing my projects and skills. It uses Prisma ORM for database management and implements server-side rendering (SSR) for improved performance.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Prisma ORM" },
+      { name: "TailwindCSS" },
+      { name: "Framer Motion" },
+      { name: "shadcn/ui" },
+      { name: "Typescript" },
+      { name: "Some necessary frontend library" },
+    ],
+    image: "/assets/portfolio.png",
+    live: "https://htoomyatnyinyi.vercel.app",
+    github: "https://github.com/htoomyatnyinyi/nextjs_portfolio.git",
   },
 ];
 

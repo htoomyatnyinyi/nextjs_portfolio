@@ -1,4 +1,57 @@
 "use server";
+import nodemailer from "nodemailer";
+
+async function sendEmail({
+  to,
+  from,
+  subject,
+  text,
+}: {
+  to: string;
+  from: string;
+  subject: string;
+  text: string;
+}) {
+  // Simulate sending an email (replace with actual implementation)
+  if (!to || !from || !subject || !text) {
+    throw new Error("All email fields are required.");
+  }
+  if (!/\S+@\S+\.\S+/.test(from)) {
+    throw new Error("Invalid email format.");
+  }
+
+  // // Simulate email sending logic
+  // // In a real application, you would use an email service like SendGrid, Nodemailer, etc.
+  // // For this example, we'll just log the email details to the console.
+  // // Replace this with actual email sending logic.
+  // // Example: await emailService.send({ to, from, subject, text });
+  // // For now, we will just log the email details.
+  // // This is a placeholder for actual email sending logic.
+  // // In a real application, you would use an email service like Nodemailer, SendGrid
+  // console.log(
+  //   `Sending email to ${to} from ${from} with subject "${subject}" and text: ${text}`
+  // );
+
+  // 🔐 Use environment variables in production!
+  const transporter = nodemailer.createTransport({
+    service: "gmail", // or "hotmail", "outlook", etc.
+    auth: {
+      user: process.env.EMAIL_USER, // e.g. your Gmail address
+      pass: process.env.EMAIL_PASS, // App password or real password (use App Password!)
+    },
+  });
+
+  const mailOptions = {
+    from,
+    to,
+    subject,
+    text,
+  };
+
+  const info = await transporter.sendMail(mailOptions);
+  console.log("Email sent:", info.response);
+  return Promise.resolve();
+}
 
 export async function contact(formData: FormData) {
   const name = formData.get("name") as string;
@@ -12,9 +65,16 @@ export async function contact(formData: FormData) {
 
   // Simulate an API call or email sending
   try {
-    // console.log({ name, email, message });
-    // await sendEmail({ to: "your-email@example.com", from: email, subject: "New Contact Form Submission", text: message });
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate delay
+    console.log({ name, email, message }, "check email");
+    await sendEmail({
+      to: "htoomyatnyinyi@gmail.com",
+      from: email,
+      subject: `${name} - New Contact Form Submission`,
+      text: message,
+    });
+
+    // await new Promise((resolve) => setTimeout(resolve, 500)); // Simulate delay
+
     if (email.includes("error")) {
       // Simulate an error for testing
       return { success: false, error: "Simulated email sending error." };
