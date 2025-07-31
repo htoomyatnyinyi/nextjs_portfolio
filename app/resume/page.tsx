@@ -24,7 +24,9 @@ const Skills = [
   { name: "Tailwind CSS", level: "Advanced" },
   { name: "Shadcn UI", level: "Intermediate" },
   { name: "Prisma ORM", level: "Advanced" },
-  { name: "RAW SQL", level: "Intermediate" },
+  { name: "MySQL", level: "Intermediate" },
+  { name: "Docker", level: "Intermediate" },
+  { name: "Git", level: "Advanced" },
 ];
 
 const Projects = [

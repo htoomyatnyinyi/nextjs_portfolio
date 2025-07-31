@@ -19,7 +19,8 @@ const Home = () => {
               Hello, I'm <br />
               <span className="text-green-500">HTOO MYAT NYI NYI</span>
             </h1>
-            <p className="max-w-[500px] mb-9 ">
+            <p className="max-w-auto mb-9 ">
+              {/* <p className="max-w-[500px] mb-9 "> */}
               I am a self-taught junior web developer with a passion for
               creating dynamic and user-friendly web applications. I'm focusing
               on both front-end and back-end development, along with experience

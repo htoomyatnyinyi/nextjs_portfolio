@@ -25,7 +25,7 @@ const services = [
     title: "Deployment",
     description:
       "Deploy and scale your apps on Vercel and Render, and setup Docker environments.",
-    tags: ["Vercel", "Render", "Docker"],
+    tags: ["Git", "Vercel", "Render", "Docker"],
     // tags: ["Vercel", "Docker", "AWS", "CI/CD"],
   },
 ];
