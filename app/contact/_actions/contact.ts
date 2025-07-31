@@ -69,7 +69,7 @@ export async function contact(formData: FormData) {
     await sendEmail({
       to: "htoomyatnyinyi@gmail.com",
       from: email,
-      subject: `${name} - New Contact Form Submission`,
+      subject: `${name} ${email} - New Contact Form`,
       text: message,
     });
 
