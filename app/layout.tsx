@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "HTOO MYAT NYIN YI | Portfolio",
-  description: "I need to walk before you can run.",
+  description: "I need to walk before I can run.",
 };
 
 export default function RootLayout({
