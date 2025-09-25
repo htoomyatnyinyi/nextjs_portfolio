@@ -12,21 +12,20 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row  justify-between items-center xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none ">
-            <span className="text-xl mb-9 pb-9 ">
-              Self-Taught Junior Web Developer
-            </span>
+            <span className="text-xl mb-9 pb-9 ">Junior Web Developer</span>
             <h1 className="text-[48px] xl:text-[80px] font-semibold ">
               Hello, I'm <br />
               <span className="text-green-500">HTOO MYAT NYI NYI</span>
             </h1>
+            {/* <span>WILL</span> */}
             <p className="max-w-auto mb-9 ">
               {/* <p className="max-w-[500px] mb-9 "> */}
-              I am a self-taught junior web developer with a passion for
-              creating dynamic and user-friendly web applications. I'm focusing
-              on both front-end and back-end development, along with experience
-              in frameworks like React or Next.js and Node.js with Express, and
-              Prisma ORM. I am eager to contribute my skills to a team that
-              values innovation and creativity in web development.
+              I am a junior web developer with a passion for creating dynamic
+              and user-friendly web applications. I'm focusing on both front-end
+              and back-end development, along with experience in frameworks like
+              React or Next.js and Node.js with Express, and Prisma ORM. I am
+              eager to contribute my skills to a team that values innovation and
+              creativity in web development.
               <br />
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
