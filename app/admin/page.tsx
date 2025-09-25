@@ -26,7 +26,7 @@ const Admin = async () => {
   console.log(a, "at Admin page");
 
   // This will now look for something like a._sum.budget instead of a._sum.id
-  const sumValue = a.test._sum.id || 0;
+  // const sumValue = a.test._sum.id || 0;
 
   return (
     <div>
@@ -36,7 +36,7 @@ const Admin = async () => {
           <p>Data: {JSON.stringify(a.data)}</p>
           <p>Count: {a.count}</p>
           {/* CORRECTED: Display the sum properly */}
-          <p>Sum of Budgets: {sumValue}</p>
+          {/* <p>Sum of Budgets: {sumValue}</p> */}
           <br />
           <div>
             {a.data.map((ae: any) => (
