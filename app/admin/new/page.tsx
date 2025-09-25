@@ -1,16 +1,16 @@
 import ProjectForm from "../_components/projectForm";
 import prisma from "@/lib/prisma";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { revalidateTag } from "next/cache";
+// import { Button } from "@/components/ui/button";
+// import Link from "next/link";
+// import { revalidateTag } from "next/cache";
 
-const getData = async () => {
-  const data = await prisma.project.findMany();
-  console.log(data, "data");
-  // revalidateTag("projects");
+// const getData = async () => {
+//   const data = await prisma.project.findMany();
+//   console.log(data, "data");
+//   // revalidateTag("projects");
 
-  return data;
-};
+//   return data;
+// };
 
 const addNewProject = async () => {
   // const projects = await getData();
