@@ -30,12 +30,12 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function Stacks() {
   return (
     <section className="py-16 " id="services">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          My Services
+          My Tech Stacks
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
