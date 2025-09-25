@@ -14,7 +14,7 @@ const ProjectForm = () => {
         action={async (formData) => {
           await addProject(formData);
         }}
-        className="p-2 space-y-8"
+        className="p-2 space-y-8  m-10 border"
       >
         <div className="space-y-2">
           <Label htmlFor="title">Name</Label>
@@ -43,4 +43,3 @@ const ProjectForm = () => {
 };
 
 export default ProjectForm;
-
